@@ -23,9 +23,16 @@ check_success "Базовые утилиты установлены"
 
 # Настройка tmux
 print_status "Настройка tmux..."
-cp configs/tmux/.tmux.conf /root/.tmux.conf
-cp configs/tmux/.tmux.conf /home/$SUDO_USER/.tmux.conf
-chown $SUDO_USER:$SUDO_USER /home/$SUDO_USER/.tmux.conf
+
+# Get the actual user's home directory
+REAL_USER=$(who am i | awk '{print $1}')
+REAL_HOME=$(getent passwd $REAL_USER | cut -d: -f6)
+
+# Create .tmux.conf in the correct location
+mkdir -p $REAL_HOME
+cp configs/tmux/.tmux.conf $REAL_HOME/.tmux.conf
+chown $REAL_USER:$REAL_USER $REAL_HOME/.tmux.conf
+
 check_success "Tmux настроен"
 
 # Настройка micro
