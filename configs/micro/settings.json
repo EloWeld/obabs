@@ -1,0 +1,11 @@
+{
+  "colorscheme": "monokai",
+  "tabsize": 4,
+  "tabstospaces": true,
+  "autoindent": true,
+  "syntax": true,
+  "pluginchannels": [
+    "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
+  ],
+  "pluginrepos": []
+}
