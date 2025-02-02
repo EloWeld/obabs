@@ -32,4 +32,9 @@ chown $REAL_USER:$REAL_USER $REAL_HOME/.p10k.zsh
 # Установка Zsh как оболочки по умолчанию
 chsh -s $(which zsh) $REAL_USER
 
-check_success "Oh My Zsh установлен" 
+check_success "Oh My Zsh установлен"
+
+# Добавляем информационное сообщение
+echo -e "${GREEN}[i] Для активации Zsh выполните команду:${NC}"
+echo -e "${BLUE}    exec zsh${NC}"
+echo -e "${GREEN}[i] Или перезапустите терминал${NC}" 
