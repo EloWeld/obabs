@@ -13,7 +13,6 @@ REAL_HOME=$(getent passwd $REAL_USER | cut -d: -f6)
 
 # Установка плагинов
 print_status "Установка плагинов Zsh..."
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$REAL_HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-$REAL_HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Установка темы Powerlevel10k

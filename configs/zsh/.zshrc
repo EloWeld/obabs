@@ -18,7 +18,6 @@ plugins=(
     node
     npm
     sudo
-    zsh-autosuggestions
     zsh-syntax-highlighting
 )
 
